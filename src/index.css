@@ -1,0 +1,34 @@
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f0f0f;
+  margin: 0;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #2f2f2f;
+  border-radius: 8px;
+}
+
+@keyframes avatar-glow-rotate {
+  0%   { box-shadow: 0 0 0 0 #bbe9ff55, 0 0 8px 2px #bbedf988; filter: hue-rotate(0deg);}
+  50%  { box-shadow: 0 0 0 0 #c4faff44, 0 0 12px 8px #e0feff80; filter: hue-rotate(180deg);}
+  100% { box-shadow: 0 0 0 0 #bbe9ff55, 0 0 8px 2px #bbedf988; filter: hue-rotate(360deg);}
+}

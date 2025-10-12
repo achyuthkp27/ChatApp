@@ -1,0 +1,36 @@
+{
+  "pronouns": [
+    "same page",
+    "there",
+    "it",
+    "that",
+    "above",
+    "as before",
+    "update that",
+    "this",
+    "those",
+    "these",
+    "such as that",
+    "where",
+    "which one",
+    "the above",
+    "the previous"
+  ],
+  "trigger_phrases": [
+    "can i",
+    "how about",
+    "what about",
+    "give more details",
+    "is it",
+    "explain more",
+    "tell me more",
+    "details please",
+    "more info",
+    "what else",
+    "continue",
+    "go on",
+    "further"
+  ],
+  "min_length": 8,
+  "similarity_threshold": 0.7
+}

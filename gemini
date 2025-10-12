@@ -1,0 +1,175 @@
+import json
+import logging
+import re
+import warnings
+
+import fitz
+import requests
+import streamlit as st
+from urllib3.exceptions import InsecureRequestWarning
+
+# Suppress only the InsecureRequestWarning
+warnings.filterwarnings("ignore", category=InsecureRequestWarning)
+
+# ==== CONFIGURATION ====
+API_KEY = "AIzaSyB-QQVwdFb33KqPsbeJxbtnlVJkfoOrSAY"
+MODEL = "gemini-2.0-flash"
+API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent?key={API_KEY}"
+FAQ_PDF_PATH = "bank_faq.pdf"
+
+# ==== LOGGING SETUP ====
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# ==== BANK STATE ====
+pending_txn = {}
+
+# ==== ANNIE PROMPT ====
+ANNIE_PROMPT_TEMPLATE = """
+You are Annie, a highly professional and friendly banking assistant. Your primary role is to provide customers with clear, comprehensive, and empathetic support for their banking inquiries.
+
+**Core Principles:**
+1. **Empathy and Professionalism:** Always begin your response by acknowledging the user's query in a helpful and polite manner. Your tone should be reassuring and professional, just like a human customer service representative.
+2. **Provide Detailed and Clear Information:** When an answer is available, provide a complete and easy-to-understand explanation. Avoid jargon and break down complex information into simple steps or bullet points where appropriate. Your goal is to ensure the user has a full understanding of the topic.
+3. **Handle Ambiguity with Grace:** If a query is vague or requires more information, kindly and professionally ask for the necessary details. Frame your request as a way to "better assist" the user.
+4. **Manage Unavailable Information:** If the information is not within your knowledge base, do not guess or provide a fabricated response. Politely inform the user of this limitation and direct them to the appropriate channel for further assistance.
+5. **Always Offer Further Assistance:** Conclude every interaction by offering to help with anything else uniquely.
+
+**Context:**
+{context_text}
+
+**User Query:**
+{user_question}
+
+**Assistant's Response:**
+"""
+
+
+def load_faq_from_pdf(pdf_path):
+    try:
+        doc = fitz.open(pdf_path)
+        text = ""
+        for page in doc:
+            text += page.get_text()
+        doc.close()
+        return text
+    except Exception as e:
+        logging.error(f"Failed to load FAQ from PDF: {e}")
+        return "FAQ content unavailable due to loading error."
+
+
+def ask_gemini(prompt, history):
+    contents = [{"role": role, "parts": [{"text": text}]} for role, text in history]
+    contents.append({"role": "user", "parts": [{"text": prompt}]})
+    payload = {
+        "contents": contents,
+        "generationConfig": {
+            "thinkingConfig": {
+                "thinkingBudget": 0
+            },
+            "temperature": 0,
+            "topK": 1,
+            "topP": 1,
+            "maxOutputTokens": 256
+        }
+    }
+    try:
+        response = requests.post(
+            API_URL,
+            headers={"Content-Type": "application/json"},
+            data=json.dumps(payload),
+            verify=False
+        )
+        response.raise_for_status()
+        data = response.json()
+        return data["candidates"][0]["content"]["parts"][0]["text"]
+    except Exception as e:
+        logging.error(f"Error communicating with Gemini API: {e}")
+        return "Sorry, I'm having trouble accessing the FAQ information right now."
+
+
+def detect_intent(user_input):
+    user_input = user_input.lower()
+    if any(keyword in user_input for keyword in ["balance", "account balance", "check balance"]):
+        return "balance"
+    if any(keyword in user_input for keyword in ["transfer", "transaction", "send money", "payment"]):
+        return "transaction"
+    return "faq"
+
+
+def handle_transaction(user_input):
+    global pending_txn
+    acct_nums = re.findall(r"\b\d{4,}\b", user_input)
+    amount_match = re.search(r"(\d+(\.\d+)?)\s*(dollars|rs|rupees)?", user_input, re.I)
+    comment_match = re.search(r"for (.+)", user_input, re.I)
+
+    if acct_nums:
+        if "from_acct" not in pending_txn:
+            pending_txn["from_acct"] = acct_nums[0]
+        elif "to_acct" not in pending_txn and acct_nums[0] != pending_txn.get("from_acct"):
+            pending_txn["to_acct"] = acct_nums[0]
+    if amount_match:
+        pending_txn["amount"] = amount_match.group(1)
+    if comment_match:
+        pending_txn["comments"] = comment_match.group(1)
+
+    missing = [field for field in ["from_acct", "to_acct", "amount", "comments"] if field not in pending_txn]
+    if missing:
+        return f"Please provide the following details to continue: {', '.join(missing)}"
+    else:
+        details = pending_txn.copy()
+        pending_txn.clear()
+        return f"Processing transfer of {details['amount']} from {details['from_acct']} to {details['to_acct']} for '{details['comments']}'."
+
+
+# ==== STREAMLIT UI ====
+st.set_page_config(page_title="BankBot Assistant", page_icon="🏦")
+st.title("🏦 BankBot Assistant")
+st.write("Welcome! Ask your banking questions below.")
+
+if "history" not in st.session_state:
+    st.session_state.history = []
+
+faq_content = load_faq_from_pdf(FAQ_PDF_PATH)
+
+with st.form("chat_form", clear_on_submit=True):
+    user_input = st.text_input("Your message:")
+    submitted = st.form_submit_button("Send")
+
+if submitted and user_input:
+    intent = detect_intent(user_input)
+
+    if intent == "balance":
+        reply = "Thank you for your query. I’m retrieving your account balance details. Please hold on a moment."
+    elif intent == "transaction":
+        reply = handle_transaction(user_input)
+    else:
+        context_prompt = ANNIE_PROMPT_TEMPLATE.format(
+            context_text=faq_content,
+            user_question=user_input
+        )
+        if len(st.session_state.history) >= 2:
+            last_user = st.session_state.history[-2][1]
+            last_bot = st.session_state.history[-1][1]
+            context_prompt += f"\nPrevious user query: {last_user}\nPrevious bot response: {last_bot}"
+        reply = ask_gemini(context_prompt, st.session_state.history)
+
+    st.session_state.history.append(("user", user_input))
+    st.session_state.history.append(("model", reply))
+
+# Display chat history with alignment
+for role, text in reversed(st.session_state.history):
+    if role == "user":
+        st.markdown(
+            f"""
+            <div style='text-align: right; padding: 10px; border-radius: 10px; margin: 5px 0;'><strong>You:</strong> {text} </div>
+            """,
+            unsafe_allow_html=True
+        )
+    else:
+        st.markdown(
+            f"""
+            <div style='text-align: left; padding: 10px; border-radius: 10px; margin: 5px 0;'><strong>BankBot:</strong> {text} </div>
+            """,
+            unsafe_allow_html=True
+        )
+

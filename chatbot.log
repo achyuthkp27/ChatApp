@@ -1,0 +1,475 @@
+2025-10-12 08:55:41,476 INFO  * Detected change in 'C:\\Achu\\ChatApplication-main\\ChatApplication-main\\Test-4.py', reloading
+2025-10-12 08:55:42,145 INFO  * Restarting with stat
+2025-10-12 08:55:44,173 INFO Loading and indexing PDF or cached vectors/chunks...
+2025-10-12 08:55:44,174 INFO Loaded cached embeddings/chunks
+2025-10-12 08:55:44,174 INFO FAISS index populated (55 entries)
+2025-10-12 08:55:44,175 INFO Ready. Serving on 0.0.0.0:5000
+2025-10-12 08:55:44,189 WARNING  * Debugger is active!
+2025-10-12 08:55:44,192 INFO  * Debugger PIN: 511-843-837
+2025-10-12 08:56:04,533 INFO 127.0.0.1 - - [12/Oct/2025 08:56:04] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 08:56:04,796 INFO Chat request (session=9aa2b054-1520-4d): what is mobile banking?
+2025-10-12 08:56:04,796 INFO Initializing new session: 9aa2b054-1520-4d
+2025-10-12 08:56:04,796 INFO Intent detected: faq
+2025-10-12 08:56:04,796 INFO [DEBUG] is_followup_question: False
+2025-10-12 08:56:04,796 INFO [DEBUG] last_topic: what is mobile banking?
+2025-10-12 08:56:04,796 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 08:56:05,858 INFO Finished embedding 1 chunks
+2025-10-12 08:56:05,858 INFO [DEBUG] query used for embedding: what is mobile banking?
+2025-10-12 08:56:05,859 INFO FAISS search: [37, 38, 36, 39, 45]
+2025-10-12 08:56:05,859 INFO Retrieved 5 context chunks for chat
+2025-10-12 08:56:05,859 INFO Calling Gemini generation API
+2025-10-12 08:56:07,186 INFO FAQ response sent: 'Mobile banking is a revolutionary way of banking from your m...' citations=['chunk_37', 'chunk_38', 'chunk_36', 'chunk_39', 'chunk_45']
+2025-10-12 08:56:07,187 INFO 127.0.0.1 - - [12/Oct/2025 08:56:07] "POST /chat HTTP/1.1" 200 -
+2025-10-12 08:56:08,822 INFO Chat request (session=fd6e6980-510f-4e): give more details
+2025-10-12 08:56:08,822 INFO Initializing new session: fd6e6980-510f-4e
+2025-10-12 08:56:08,823 INFO Intent detected: faq
+2025-10-12 08:56:08,823 INFO [DEBUG] is_followup_question: True
+2025-10-12 08:56:08,823 INFO [DEBUG] last_topic: give more details
+2025-10-12 08:56:08,823 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 08:56:10,329 INFO Finished embedding 1 chunks
+2025-10-12 08:56:10,330 INFO [DEBUG] query used for embedding: give more details
+2025-10-12 08:56:10,331 INFO FAISS search: [37, 54, 10, 16, 18]
+2025-10-12 08:56:10,338 INFO Retrieved 5 context chunks for chat
+2025-10-12 08:56:10,338 INFO Calling Gemini generation API
+2025-10-12 08:56:11,796 INFO FAQ response sent: 'Okay, I will provide more details.
+
+You can register for mob...' citations=['chunk_37', 'chunk_54', 'chunk_10', 'chunk_16', 'chunk_18']
+2025-10-12 08:56:11,797 INFO 127.0.0.1 - - [12/Oct/2025 08:56:11] "POST /chat HTTP/1.1" 200 -
+2025-10-12 08:56:28,445 INFO 127.0.0.1 - - [12/Oct/2025 08:56:28] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 08:56:28,710 INFO Chat request (session=a51c9a2b-ef0b-4d): how to download
+2025-10-12 08:56:28,710 INFO Initializing new session: a51c9a2b-ef0b-4d
+2025-10-12 08:56:28,710 INFO Intent detected: faq
+2025-10-12 08:56:28,710 INFO [DEBUG] is_followup_question: False
+2025-10-12 08:56:28,710 INFO [DEBUG] last_topic: how to download
+2025-10-12 08:56:28,710 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 08:56:29,756 INFO Finished embedding 1 chunks
+2025-10-12 08:56:29,757 INFO [DEBUG] query used for embedding: how to download
+2025-10-12 08:56:29,757 INFO FAISS search: [14, 40, 37, 49, 10]
+2025-10-12 08:56:29,757 INFO Retrieved 5 context chunks for chat
+2025-10-12 08:56:29,757 INFO Calling Gemini generation API
+2025-10-12 08:56:30,826 INFO FAQ response sent: 'I do not have enough information to answer your question. Pl...' citations=['chunk_14', 'chunk_40', 'chunk_37', 'chunk_49', 'chunk_10']
+2025-10-12 08:56:30,827 INFO 127.0.0.1 - - [12/Oct/2025 08:56:30] "POST /chat HTTP/1.1" 200 -
+2025-10-12 08:56:45,146 INFO 127.0.0.1 - - [12/Oct/2025 08:56:45] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 08:56:45,459 INFO Chat request (session=297d243f-3f64-41): how to download the mobile banking app
+2025-10-12 08:56:45,460 INFO Initializing new session: 297d243f-3f64-41
+2025-10-12 08:56:45,460 INFO Intent detected: faq
+2025-10-12 08:56:45,461 INFO [DEBUG] is_followup_question: False
+2025-10-12 08:56:45,461 INFO [DEBUG] last_topic: how to download the mobile banking app
+2025-10-12 08:56:45,461 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 08:56:46,546 INFO Finished embedding 1 chunks
+2025-10-12 08:56:46,548 INFO [DEBUG] query used for embedding: how to download the mobile banking app
+2025-10-12 08:56:46,548 INFO FAISS search: [37, 38, 39, 36, 48]
+2025-10-12 08:56:46,548 INFO Retrieved 5 context chunks for chat
+2025-10-12 08:56:46,548 INFO Calling Gemini generation API
+2025-10-12 08:56:47,528 INFO FAQ response sent: 'If you have a smartphone, you can download the mobile bankin...' citations=['chunk_37', 'chunk_38', 'chunk_39', 'chunk_36', 'chunk_48']
+2025-10-12 08:56:47,529 INFO 127.0.0.1 - - [12/Oct/2025 08:56:47] "POST /chat HTTP/1.1" 200 -
+2025-10-12 08:56:59,973 INFO 127.0.0.1 - - [12/Oct/2025 08:56:59] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 08:57:00,287 INFO Chat request (session=74b7ac42-06b1-4c): which app store
+2025-10-12 08:57:00,287 INFO Initializing new session: 74b7ac42-06b1-4c
+2025-10-12 08:57:00,287 INFO Intent detected: faq
+2025-10-12 08:57:00,288 INFO [DEBUG] is_followup_question: False
+2025-10-12 08:57:00,288 INFO [DEBUG] last_topic: which app store
+2025-10-12 08:57:00,288 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 08:57:01,365 INFO Finished embedding 1 chunks
+2025-10-12 08:57:01,367 INFO [DEBUG] query used for embedding: which app store
+2025-10-12 08:57:01,368 INFO FAISS search: [37, 40, 10, 22, 16]
+2025-10-12 08:57:01,368 INFO Retrieved 5 context chunks for chat
+2025-10-12 08:57:01,368 INFO Calling Gemini generation API
+2025-10-12 08:57:02,435 INFO FAQ response sent: 'If you have a smartphone, you can download the mobile bankin...' citations=['chunk_37', 'chunk_40', 'chunk_10', 'chunk_22', 'chunk_16']
+2025-10-12 08:57:02,435 INFO 127.0.0.1 - - [12/Oct/2025 08:57:02] "POST /chat HTTP/1.1" 200 -
+2025-10-12 08:57:05,480 INFO 127.0.0.1 - - [12/Oct/2025 08:57:05] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 08:57:05,798 INFO Chat request (session=163416bf-c620-4e): what is the name of the app
+2025-10-12 08:57:05,799 INFO Initializing new session: 163416bf-c620-4e
+2025-10-12 08:57:05,799 INFO Intent detected: faq
+2025-10-12 08:57:05,799 INFO [DEBUG] is_followup_question: False
+2025-10-12 08:57:05,799 INFO [DEBUG] last_topic: what is the name of the app
+2025-10-12 08:57:05,799 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 08:57:06,851 INFO Finished embedding 1 chunks
+2025-10-12 08:57:06,852 INFO [DEBUG] query used for embedding: what is the name of the app
+2025-10-12 08:57:06,852 INFO FAISS search: [37, 40, 54, 47, 49]
+2025-10-12 08:57:06,852 INFO Retrieved 5 context chunks for chat
+2025-10-12 08:57:06,852 INFO Calling Gemini generation API
+2025-10-12 08:57:07,839 INFO FAQ response sent: 'You can download the mobile banking app via the App Store....' citations=['chunk_37', 'chunk_40', 'chunk_54', 'chunk_47', 'chunk_49']
+2025-10-12 08:57:07,840 INFO 127.0.0.1 - - [12/Oct/2025 08:57:07] "POST /chat HTTP/1.1" 200 -
+2025-10-12 09:09:14,362 INFO Loading and indexing PDF or cached vectors/chunks...
+2025-10-12 09:09:14,363 INFO Loaded cached embeddings/chunks
+2025-10-12 09:09:14,363 INFO FAISS index populated (55 entries)
+2025-10-12 09:09:14,364 INFO Ready. Serving on 0.0.0.0:5000
+2025-10-12 09:09:14,390 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.13:5000
+2025-10-12 09:09:14,391 INFO [33mPress CTRL+C to quit[0m
+2025-10-12 09:09:14,392 INFO  * Restarting with stat
+2025-10-12 09:09:16,337 INFO Loading and indexing PDF or cached vectors/chunks...
+2025-10-12 09:09:16,339 INFO Loaded cached embeddings/chunks
+2025-10-12 09:09:16,339 INFO FAISS index populated (55 entries)
+2025-10-12 09:09:16,339 INFO Ready. Serving on 0.0.0.0:5000
+2025-10-12 09:09:16,353 WARNING  * Debugger is active!
+2025-10-12 09:09:16,355 INFO  * Debugger PIN: 511-843-837
+2025-10-12 09:09:33,849 INFO 127.0.0.1 - - [12/Oct/2025 09:09:33] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 09:09:34,114 INFO Chat request (session=ddc70eab-156b-48): what is agive more details on mobile banking and credit card application
+2025-10-12 09:09:34,115 INFO Initializing new session: ddc70eab-156b-48
+2025-10-12 09:09:34,115 INFO Intent detected: faq
+2025-10-12 09:09:34,115 INFO [DEBUG] is_followup_question: True
+2025-10-12 09:09:34,115 INFO [DEBUG] last_topic: what is agive more details on mobile banking and credit card application
+2025-10-12 09:09:34,115 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 09:09:35,540 INFO Finished embedding 1 chunks
+2025-10-12 09:09:35,543 INFO [DEBUG] query used for embedding: what is agive more details on mobile banking and credit card application
+2025-10-12 09:09:35,544 INFO FAISS search: [36, 44, 37, 43, 18]
+2025-10-12 09:09:35,550 INFO Retrieved 5 context chunks for chat
+2025-10-12 09:09:35,551 INFO Calling Gemini generation API
+2025-10-12 09:09:38,287 INFO FAQ response sent: 'Certainly! Here's more information on mobile banking and cre...' citations=['chunk_36', 'chunk_44', 'chunk_37', 'chunk_43', 'chunk_18']
+2025-10-12 09:09:38,289 INFO 127.0.0.1 - - [12/Oct/2025 09:09:38] "POST /chat HTTP/1.1" 200 -
+2025-10-12 09:22:34,967 INFO 127.0.0.1 - - [12/Oct/2025 09:22:34] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 09:22:35,217 INFO Chat request (session=f590fc8f-5e0b-46): Hi
+2025-10-12 09:22:35,217 INFO Initializing new session: f590fc8f-5e0b-46
+2025-10-12 09:22:35,217 INFO Intent detected: faq
+2025-10-12 09:22:35,217 INFO [DEBUG] is_followup_question: False
+2025-10-12 09:22:35,217 INFO [DEBUG] last_topic: Hi
+2025-10-12 09:22:35,217 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 09:22:36,634 INFO Finished embedding 1 chunks
+2025-10-12 09:22:36,636 INFO [DEBUG] query used for embedding: Hi
+2025-10-12 09:22:36,637 INFO FAISS search: [54, 10, 18, 40, 8]
+2025-10-12 09:22:36,637 INFO Retrieved 5 context chunks for chat
+2025-10-12 09:22:36,637 INFO Calling Gemini generation API
+2025-10-12 09:22:37,997 INFO FAQ response sent: 'Hi! How can I help you today?...' citations=['chunk_54', 'chunk_10', 'chunk_18', 'chunk_40', 'chunk_8']
+2025-10-12 09:22:37,999 INFO 127.0.0.1 - - [12/Oct/2025 09:22:37] "POST /chat HTTP/1.1" 200 -
+2025-10-12 09:22:49,615 INFO 127.0.0.1 - - [12/Oct/2025 09:22:49] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 09:22:49,933 INFO Chat request (session=cb0a585c-6ef3-46): what is mobile banking
+2025-10-12 09:22:49,933 INFO Initializing new session: cb0a585c-6ef3-46
+2025-10-12 09:22:49,934 INFO Intent detected: faq
+2025-10-12 09:22:49,934 INFO [DEBUG] is_followup_question: False
+2025-10-12 09:22:49,934 INFO [DEBUG] last_topic: what is mobile banking
+2025-10-12 09:22:49,934 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 09:22:51,347 INFO Finished embedding 1 chunks
+2025-10-12 09:22:51,349 INFO [DEBUG] query used for embedding: what is mobile banking
+2025-10-12 09:22:51,350 INFO FAISS search: [38, 37, 45, 36, 39]
+2025-10-12 09:22:51,350 INFO Retrieved 5 context chunks for chat
+2025-10-12 09:22:51,350 INFO Calling Gemini generation API
+2025-10-12 09:22:52,684 INFO FAQ response sent: 'Mobile banking is a revolutionary way of banking from your m...' citations=['chunk_38', 'chunk_37', 'chunk_45', 'chunk_36', 'chunk_39']
+2025-10-12 09:22:52,685 INFO 127.0.0.1 - - [12/Oct/2025 09:22:52] "POST /chat HTTP/1.1" 200 -
+2025-10-12 09:24:30,328 INFO 127.0.0.1 - - [12/Oct/2025 09:24:30] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 09:24:30,592 INFO Chat request (session=44b0ab87-b47d-46): give more details on mobile banking anc credit card application
+2025-10-12 09:24:30,593 INFO Initializing new session: 44b0ab87-b47d-46
+2025-10-12 09:24:30,593 INFO Intent detected: faq
+2025-10-12 09:24:30,593 INFO [DEBUG] is_followup_question: True
+2025-10-12 09:24:30,593 INFO [DEBUG] last_topic: give more details on mobile banking anc credit card application
+2025-10-12 09:24:30,593 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 09:24:32,050 INFO Finished embedding 1 chunks
+2025-10-12 09:24:32,052 INFO [DEBUG] query used for embedding: give more details on mobile banking anc credit card application
+2025-10-12 09:24:32,053 INFO FAISS search: [36, 44, 43, 37, 38]
+2025-10-12 09:24:32,060 INFO Retrieved 5 context chunks for chat
+2025-10-12 09:24:32,061 INFO Calling Gemini generation API
+2025-10-12 09:24:33,496 INFO FAQ response sent: 'I can certainly provide more details on mobile banking.
+
+Wit...' citations=['chunk_36', 'chunk_44', 'chunk_43', 'chunk_37', 'chunk_38']
+2025-10-12 09:24:33,497 INFO 127.0.0.1 - - [12/Oct/2025 09:24:33] "POST /chat HTTP/1.1" 200 -
+2025-10-12 09:29:43,325 INFO 127.0.0.1 - - [12/Oct/2025 09:29:43] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 09:29:43,583 INFO Chat request (session=c86f03f3-664f-4e): credit card block?
+2025-10-12 09:29:43,583 INFO Initializing new session: c86f03f3-664f-4e
+2025-10-12 09:29:43,583 INFO Intent detected: faq
+2025-10-12 09:29:43,583 INFO [DEBUG] is_followup_question: True
+2025-10-12 09:29:43,583 INFO [DEBUG] last_topic: credit card block?
+2025-10-12 09:29:43,584 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 09:29:45,021 INFO Finished embedding 1 chunks
+2025-10-12 09:29:45,022 INFO [DEBUG] query used for embedding: credit card block?
+2025-10-12 09:29:45,023 INFO FAISS search: [7, 30, 27, 24, 28]
+2025-10-12 09:29:45,028 INFO Retrieved 5 context chunks for chat
+2025-10-12 09:29:45,028 INFO Calling Gemini generation API
+2025-10-12 09:29:47,089 INFO FAQ response sent: 'To block your Credit/Prepaid Card, you can either:
+
+*   **Vi...' citations=['chunk_7', 'chunk_30', 'chunk_27', 'chunk_24', 'chunk_28']
+2025-10-12 09:29:47,090 INFO 127.0.0.1 - - [12/Oct/2025 09:29:47] "POST /chat HTTP/1.1" 200 -
+2025-10-12 09:31:42,154 INFO 127.0.0.1 - - [12/Oct/2025 09:31:42] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 09:31:42,421 INFO Chat request (session=2151a04a-1e04-4d): how to hotlist my debit card and credit card and tell me more details on mobile banking
+2025-10-12 09:31:42,421 INFO Initializing new session: 2151a04a-1e04-4d
+2025-10-12 09:31:42,421 INFO Intent detected: faq
+2025-10-12 09:31:42,421 INFO [DEBUG] is_followup_question: True
+2025-10-12 09:31:42,422 INFO [DEBUG] last_topic: how to hotlist my debit card and credit card and tell me more details on mobile banking
+2025-10-12 09:31:42,422 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 09:31:43,935 INFO Finished embedding 1 chunks
+2025-10-12 09:31:43,937 INFO [DEBUG] query used for embedding: how to hotlist my debit card and credit card and tell me more details on mobile banking
+2025-10-12 09:31:43,937 INFO FAISS search: [52, 4, 7, 36, 44]
+2025-10-12 09:31:43,948 INFO Retrieved 5 context chunks for chat
+2025-10-12 09:31:43,948 INFO Calling Gemini generation API
+2025-10-12 09:31:46,322 INFO FAQ response sent: 'Okay! Here's how to hotlist your debit and credit cards, alo...' citations=['chunk_52', 'chunk_4', 'chunk_7', 'chunk_36', 'chunk_44']
+2025-10-12 09:31:46,323 INFO 127.0.0.1 - - [12/Oct/2025 09:31:46] "POST /chat HTTP/1.1" 200 -
+2025-10-12 09:33:32,386 INFO 127.0.0.1 - - [12/Oct/2025 09:33:32] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 09:33:32,651 INFO Chat request (session=7ef9bd3a-6d9e-43): hat's the website link
+2025-10-12 09:33:32,651 INFO Initializing new session: 7ef9bd3a-6d9e-43
+2025-10-12 09:33:32,651 INFO Intent detected: faq
+2025-10-12 09:33:32,651 INFO [DEBUG] is_followup_question: True
+2025-10-12 09:33:32,651 INFO [DEBUG] last_topic: hat's the website link
+2025-10-12 09:33:32,651 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 09:33:33,754 INFO Finished embedding 1 chunks
+2025-10-12 09:33:33,757 INFO [DEBUG] query used for embedding: hat's the website link
+2025-10-12 09:33:33,758 INFO FAISS search: [17, 18, 16, 54, 51]
+2025-10-12 09:33:33,763 INFO Retrieved 5 context chunks for chat
+2025-10-12 09:33:33,763 INFO Calling Gemini generation API
+2025-10-12 09:33:34,651 INFO FAQ response sent: 'Our website address is https://www.firstcitizensgroup.com/tt...' citations=['chunk_17', 'chunk_18', 'chunk_16', 'chunk_54', 'chunk_51']
+2025-10-12 09:33:34,652 INFO 127.0.0.1 - - [12/Oct/2025 09:33:34] "POST /chat HTTP/1.1" 200 -
+2025-10-12 09:35:11,128 INFO 127.0.0.1 - - [12/Oct/2025 09:35:11] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 09:35:11,393 INFO Chat request (session=d59b7d23-e584-4e): Hi bro
+2025-10-12 09:35:11,393 INFO Initializing new session: d59b7d23-e584-4e
+2025-10-12 09:35:11,393 INFO Intent detected: faq
+2025-10-12 09:35:11,393 INFO [DEBUG] is_followup_question: False
+2025-10-12 09:35:11,393 INFO [DEBUG] last_topic: Hi bro
+2025-10-12 09:35:11,393 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 09:35:12,464 INFO Finished embedding 1 chunks
+2025-10-12 09:35:12,465 INFO [DEBUG] query used for embedding: Hi bro
+2025-10-12 09:35:12,465 INFO FAISS search: [54, 10, 18, 0, 2]
+2025-10-12 09:35:12,465 INFO Retrieved 5 context chunks for chat
+2025-10-12 09:35:12,465 INFO Calling Gemini generation API
+2025-10-12 09:35:13,598 INFO FAQ response sent: 'I trust this message finds you well.
+
+Should you require ass...' citations=['chunk_54', 'chunk_10', 'chunk_18', 'chunk_0', 'chunk_2']
+2025-10-12 09:35:13,600 INFO 127.0.0.1 - - [12/Oct/2025 09:35:13] "POST /chat HTTP/1.1" 200 -
+2025-10-12 09:35:53,099 INFO 127.0.0.1 - - [12/Oct/2025 09:35:53] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 09:35:53,411 INFO Chat request (session=b9280201-f20f-46): why should I be a part of your bank?
+2025-10-12 09:35:53,411 INFO Initializing new session: b9280201-f20f-46
+2025-10-12 09:35:53,411 INFO Intent detected: faq
+2025-10-12 09:35:53,411 INFO [DEBUG] is_followup_question: False
+2025-10-12 09:35:53,412 INFO [DEBUG] last_topic: why should I be a part of your bank?
+2025-10-12 09:35:53,412 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 09:35:54,513 INFO Finished embedding 1 chunks
+2025-10-12 09:35:54,515 INFO [DEBUG] query used for embedding: why should I be a part of your bank?
+2025-10-12 09:35:54,517 INFO FAISS search: [37, 38, 10, 22, 46]
+2025-10-12 09:35:54,517 INFO Retrieved 5 context chunks for chat
+2025-10-12 09:35:54,517 INFO Calling Gemini generation API
+2025-10-12 09:35:55,799 INFO FAQ response sent: 'As a First Citizens customer, you can register for mobile ba...' citations=['chunk_37', 'chunk_38', 'chunk_10', 'chunk_22', 'chunk_46']
+2025-10-12 09:35:55,800 INFO 127.0.0.1 - - [12/Oct/2025 09:35:55] "POST /chat HTTP/1.1" 200 -
+2025-10-12 09:38:37,468 INFO 127.0.0.1 - - [12/Oct/2025 09:38:37] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 09:38:37,734 INFO Chat request (session=8bc4d961-bbae-4e): give me details on wire transfer and bill payments
+2025-10-12 09:38:37,734 INFO Initializing new session: 8bc4d961-bbae-4e
+2025-10-12 09:38:37,734 INFO Intent detected: fund_transfer
+2025-10-12 09:38:37,735 INFO Functional intent handled: {'type': 'functional_intent', 'intent': 'fund_transfer', 'slots': {}, 'session_id': '8bc4d961-bbae-4e', 'pii_redacted': False}
+2025-10-12 09:38:37,736 INFO 127.0.0.1 - - [12/Oct/2025 09:38:37] "POST /chat HTTP/1.1" 200 -
+2025-10-12 09:38:55,883 INFO 127.0.0.1 - - [12/Oct/2025 09:38:55] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 09:38:56,188 INFO Chat request (session=6d91c0b0-d8b6-4d): give me details on wire transfer and bill payments
+2025-10-12 09:38:56,188 INFO Initializing new session: 6d91c0b0-d8b6-4d
+2025-10-12 09:38:56,188 INFO Intent detected: fund_transfer
+2025-10-12 09:38:56,188 INFO Functional intent handled: {'type': 'functional_intent', 'intent': 'fund_transfer', 'slots': {}, 'session_id': '6d91c0b0-d8b6-4d', 'pii_redacted': False}
+2025-10-12 09:38:56,189 INFO 127.0.0.1 - - [12/Oct/2025 09:38:56] "POST /chat HTTP/1.1" 200 -
+2025-10-12 09:40:41,963 INFO 127.0.0.1 - - [12/Oct/2025 09:40:41] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 09:40:42,227 INFO Chat request (session=d777cfd2-0c28-47): better tell me more details on mobile banking, credit card, debit card. don't give it in list
+2025-10-12 09:40:42,227 INFO Initializing new session: d777cfd2-0c28-47
+2025-10-12 09:40:42,227 INFO Intent detected: faq
+2025-10-12 09:40:42,227 INFO [DEBUG] is_followup_question: True
+2025-10-12 09:40:42,227 INFO [DEBUG] last_topic: better tell me more details on mobile banking, credit card, debit card. don't give it in list
+2025-10-12 09:40:42,227 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 09:40:43,688 INFO Finished embedding 1 chunks
+2025-10-12 09:40:43,691 INFO [DEBUG] query used for embedding: better tell me more details on mobile banking, credit card, debit card. don't give it in list
+2025-10-12 09:40:43,692 INFO FAISS search: [36, 37, 44, 4, 43]
+2025-10-12 09:40:43,703 INFO Retrieved 5 context chunks for chat
+2025-10-12 09:40:43,703 INFO Calling Gemini generation API
+2025-10-12 09:40:46,459 INFO FAQ response sent: 'I can help with that!
+
+**Mobile Banking:** It's a service th...' citations=['chunk_36', 'chunk_37', 'chunk_44', 'chunk_4', 'chunk_43']
+2025-10-12 09:40:46,461 INFO 127.0.0.1 - - [12/Oct/2025 09:40:46] "POST /chat HTTP/1.1" 200 -
+2025-10-12 09:43:01,037 INFO 127.0.0.1 - - [12/Oct/2025 09:43:01] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 09:43:01,302 INFO Chat request (session=81afd997-4c09-4b): better tell me more details on mobile banking, credit card, debit card. don't give it in list
+2025-10-12 09:43:01,303 INFO Initializing new session: 81afd997-4c09-4b
+2025-10-12 09:43:01,303 INFO Intent detected: faq
+2025-10-12 09:43:01,303 INFO [DEBUG] is_followup_question: True
+2025-10-12 09:43:01,303 INFO [DEBUG] last_topic: better tell me more details on mobile banking, credit card, debit card. don't give it in list
+2025-10-12 09:43:01,303 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 09:43:02,756 INFO Finished embedding 1 chunks
+2025-10-12 09:43:02,757 INFO [DEBUG] query used for embedding: better tell me more details on mobile banking, credit card, debit card. don't give it in list
+2025-10-12 09:43:02,758 INFO FAISS search: [36, 37, 44, 4, 43]
+2025-10-12 09:43:02,771 INFO Retrieved 5 context chunks for chat
+2025-10-12 09:43:02,771 INFO Calling Gemini generation API
+2025-10-12 09:43:05,425 INFO FAQ response sent: 'I can help you with that!
+
+**Mobile Banking:** It's a servic...' citations=['chunk_36', 'chunk_37', 'chunk_44', 'chunk_4', 'chunk_43']
+2025-10-12 09:43:05,425 INFO 127.0.0.1 - - [12/Oct/2025 09:43:05] "POST /chat HTTP/1.1" 200 -
+2025-10-12 09:44:20,438 INFO 127.0.0.1 - - [12/Oct/2025 09:44:20] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 09:44:20,704 INFO Chat request (session=fc2f5729-d9a5-46): better tell me more details on mobile banking, credit card, debit card. don't give it in list
+2025-10-12 09:44:20,704 INFO Initializing new session: fc2f5729-d9a5-46
+2025-10-12 09:44:20,704 INFO Intent detected: faq
+2025-10-12 09:44:20,704 INFO [DEBUG] is_followup_question: True
+2025-10-12 09:44:20,705 INFO [DEBUG] last_topic: better tell me more details on mobile banking, credit card, debit card. don't give it in list
+2025-10-12 09:44:20,705 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 09:44:21,789 INFO Finished embedding 1 chunks
+2025-10-12 09:44:21,791 INFO [DEBUG] query used for embedding: better tell me more details on mobile banking, credit card, debit card. don't give it in list
+2025-10-12 09:44:21,792 INFO FAISS search: [36, 37, 44, 4, 43]
+2025-10-12 09:44:21,793 INFO Retrieved 5 context chunks for chat
+2025-10-12 09:44:21,794 INFO Calling Gemini generation API
+2025-10-12 09:44:24,704 INFO FAQ response sent: 'I can certainly provide you with more details on mobile bank...' citations=['chunk_36', 'chunk_37', 'chunk_44', 'chunk_4', 'chunk_43']
+2025-10-12 09:44:24,706 INFO 127.0.0.1 - - [12/Oct/2025 09:44:24] "POST /chat HTTP/1.1" 200 -
+2025-10-12 10:10:16,761 INFO 127.0.0.1 - - [12/Oct/2025 10:10:16] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 10:10:17,016 INFO Chat request (session=4db37056-f52e-40): any fee on wire transfer?
+2025-10-12 10:10:17,016 INFO Initializing new session: 4db37056-f52e-40
+2025-10-12 10:10:17,016 INFO Intent detected: fund_transfer
+2025-10-12 10:10:17,016 INFO Functional intent handled: {'type': 'functional_intent', 'intent': 'fund_transfer', 'slots': {}, 'session_id': '4db37056-f52e-40', 'pii_redacted': False}
+2025-10-12 10:10:17,016 INFO 127.0.0.1 - - [12/Oct/2025 10:10:17] "POST /chat HTTP/1.1" 200 -
+2025-10-12 10:10:30,874 INFO 127.0.0.1 - - [12/Oct/2025 10:10:30] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 10:10:31,178 INFO Chat request (session=5ba97879-47ba-4c): any fee on wire?
+2025-10-12 10:10:31,178 INFO Initializing new session: 5ba97879-47ba-4c
+2025-10-12 10:10:31,178 INFO Intent detected: faq
+2025-10-12 10:10:31,178 INFO [DEBUG] is_followup_question: False
+2025-10-12 10:10:31,178 INFO [DEBUG] last_topic: any fee on wire?
+2025-10-12 10:10:31,178 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 10:10:32,274 INFO Finished embedding 1 chunks
+2025-10-12 10:10:32,274 INFO [DEBUG] query used for embedding: any fee on wire?
+2025-10-12 10:10:32,275 INFO FAISS search: [51, 50, 49, 37, 32]
+2025-10-12 10:10:32,275 INFO Retrieved 5 context chunks for chat
+2025-10-12 10:10:32,275 INFO Calling Gemini generation API
+2025-10-12 10:10:33,184 INFO FAQ response sent: 'To view the entire list of fees and charges for wire transfe...' citations=['chunk_51', 'chunk_50', 'chunk_49', 'chunk_37', 'chunk_32']
+2025-10-12 10:10:33,184 INFO 127.0.0.1 - - [12/Oct/2025 10:10:33] "POST /chat HTTP/1.1" 200 -
+2025-10-12 10:22:38,539 INFO 127.0.0.1 - - [12/Oct/2025 10:22:38] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 10:22:38,804 INFO Chat request (session=62558612-b054-4b): credit card charges
+2025-10-12 10:22:38,804 INFO Initializing new session: 62558612-b054-4b
+2025-10-12 10:22:38,804 INFO Intent detected: faq
+2025-10-12 10:22:38,804 INFO [DEBUG] is_followup_question: True
+2025-10-12 10:22:38,804 INFO [DEBUG] last_topic: credit card charges
+2025-10-12 10:22:38,804 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 10:22:39,892 INFO Finished embedding 1 chunks
+2025-10-12 10:22:39,893 INFO [DEBUG] query used for embedding: credit card charges
+2025-10-12 10:22:39,893 INFO FAISS search: [32, 18, 31, 23, 33]
+2025-10-12 10:22:39,895 INFO Retrieved 5 context chunks for chat
+2025-10-12 10:22:39,895 INFO Calling Gemini generation API
+2025-10-12 10:22:40,889 INFO FAQ response sent: 'Please be more specific about which area of credit card char...' citations=['chunk_32', 'chunk_18', 'chunk_31', 'chunk_23', 'chunk_33']
+2025-10-12 10:22:40,889 INFO 127.0.0.1 - - [12/Oct/2025 10:22:40] "POST /chat HTTP/1.1" 200 -
+2025-10-12 10:22:58,160 INFO 127.0.0.1 - - [12/Oct/2025 10:22:58] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 10:22:58,469 INFO Chat request (session=54eee7c7-6134-42): what charges are applicable
+2025-10-12 10:22:58,469 INFO Initializing new session: 54eee7c7-6134-42
+2025-10-12 10:22:58,470 INFO Intent detected: faq
+2025-10-12 10:22:58,470 INFO [DEBUG] is_followup_question: False
+2025-10-12 10:22:58,470 INFO [DEBUG] last_topic: what charges are applicable
+2025-10-12 10:22:58,470 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 10:22:59,539 INFO Finished embedding 1 chunks
+2025-10-12 10:22:59,540 INFO [DEBUG] query used for embedding: what charges are applicable
+2025-10-12 10:22:59,540 INFO FAISS search: [51, 33, 18, 17, 37]
+2025-10-12 10:22:59,540 INFO Retrieved 5 context chunks for chat
+2025-10-12 10:22:59,540 INFO Calling Gemini generation API
+2025-10-12 10:23:00,938 INFO FAQ response sent: 'You can view the entire list of fees and charges at https://...' citations=['chunk_51', 'chunk_33', 'chunk_18', 'chunk_17', 'chunk_37']
+2025-10-12 10:23:00,938 INFO 127.0.0.1 - - [12/Oct/2025 10:23:00] "POST /chat HTTP/1.1" 200 -
+2025-10-12 10:33:38,441 INFO 127.0.0.1 - - [12/Oct/2025 10:33:38] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 10:33:38,690 INFO Chat request (session=bfaa0a3a-1cc7-43): wire fee
+2025-10-12 10:33:38,690 INFO Initializing new session: bfaa0a3a-1cc7-43
+2025-10-12 10:33:38,690 INFO Intent detected: faq
+2025-10-12 10:33:38,690 INFO [DEBUG] is_followup_question: False
+2025-10-12 10:33:38,690 INFO [DEBUG] last_topic: wire fee
+2025-10-12 10:33:38,690 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 10:33:39,777 INFO Finished embedding 1 chunks
+2025-10-12 10:33:39,777 INFO [DEBUG] query used for embedding: wire fee
+2025-10-12 10:33:39,778 INFO FAISS search: [51, 50, 49, 32, 33]
+2025-10-12 10:33:39,778 INFO Retrieved 5 context chunks for chat
+2025-10-12 10:33:39,778 INFO Calling Gemini generation API
+2025-10-12 10:33:40,863 INFO FAQ response sent: 'To view the entire list of fees and charges for a wire trans...' citations=['chunk_51', 'chunk_50', 'chunk_49', 'chunk_32', 'chunk_33']
+2025-10-12 10:33:40,864 INFO 127.0.0.1 - - [12/Oct/2025 10:33:40] "POST /chat HTTP/1.1" 200 -
+2025-10-12 10:35:56,579 INFO 127.0.0.1 - - [12/Oct/2025 10:35:56] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 10:35:56,844 INFO Chat request (session=de9f0053-8008-4e): hi
+2025-10-12 10:35:56,844 INFO Initializing new session: de9f0053-8008-4e
+2025-10-12 10:35:56,844 INFO Intent detected: faq
+2025-10-12 10:35:56,845 INFO [DEBUG] is_followup_question: False
+2025-10-12 10:35:56,845 INFO [DEBUG] last_topic: hi
+2025-10-12 10:35:56,845 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 10:35:57,919 INFO Finished embedding 1 chunks
+2025-10-12 10:35:57,919 INFO [DEBUG] query used for embedding: hi
+2025-10-12 10:35:57,920 INFO FAISS search: [54, 18, 10, 40, 16]
+2025-10-12 10:35:57,920 INFO Retrieved 5 context chunks for chat
+2025-10-12 10:35:57,920 INFO Calling Gemini generation API
+2025-10-12 10:35:58,931 INFO FAQ response sent: 'Hi! How can I help you today?...' citations=['chunk_54', 'chunk_18', 'chunk_10', 'chunk_40', 'chunk_16']
+2025-10-12 10:35:58,931 INFO 127.0.0.1 - - [12/Oct/2025 10:35:58] "POST /chat HTTP/1.1" 200 -
+2025-10-12 10:36:29,956 INFO 127.0.0.1 - - [12/Oct/2025 10:36:29] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 10:36:30,268 INFO Chat request (session=d499b069-72be-4e): mobile banking advantages
+2025-10-12 10:36:30,268 INFO Initializing new session: d499b069-72be-4e
+2025-10-12 10:36:30,268 INFO Intent detected: faq
+2025-10-12 10:36:30,268 INFO [DEBUG] is_followup_question: False
+2025-10-12 10:36:30,268 INFO [DEBUG] last_topic: mobile banking advantages
+2025-10-12 10:36:30,268 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 10:36:31,306 INFO Finished embedding 1 chunks
+2025-10-12 10:36:31,307 INFO [DEBUG] query used for embedding: mobile banking advantages
+2025-10-12 10:36:31,307 INFO FAISS search: [37, 38, 36, 44, 46]
+2025-10-12 10:36:31,307 INFO Retrieved 5 context chunks for chat
+2025-10-12 10:36:31,307 INFO Calling Gemini generation API
+2025-10-12 10:36:32,252 INFO FAQ response sent: 'First Citizens' Mobile Banking allows you to view accounts, ...' citations=['chunk_37', 'chunk_38', 'chunk_36', 'chunk_44', 'chunk_46']
+2025-10-12 10:36:32,253 INFO 127.0.0.1 - - [12/Oct/2025 10:36:32] "POST /chat HTTP/1.1" 200 -
+2025-10-12 10:37:17,371 INFO 127.0.0.1 - - [12/Oct/2025 10:37:17] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 10:37:17,678 INFO Chat request (session=90ed35a4-bb5a-4f): yes
+2025-10-12 10:37:17,678 INFO Initializing new session: 90ed35a4-bb5a-4f
+2025-10-12 10:37:17,678 INFO Intent detected: faq
+2025-10-12 10:37:17,678 INFO [DEBUG] is_followup_question: False
+2025-10-12 10:37:17,678 INFO [DEBUG] last_topic: yes
+2025-10-12 10:37:17,678 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 10:37:18,767 INFO Finished embedding 1 chunks
+2025-10-12 10:37:18,768 INFO [DEBUG] query used for embedding: yes
+2025-10-12 10:37:18,768 INFO FAISS search: [54, 10, 18, 16, 40]
+2025-10-12 10:37:18,768 INFO Retrieved 5 context chunks for chat
+2025-10-12 10:37:18,768 INFO Calling Gemini generation API
+2025-10-12 10:37:19,769 INFO FAQ response sent: 'Okay. Should you require further assistance, connect with ou...' citations=['chunk_54', 'chunk_10', 'chunk_18', 'chunk_16', 'chunk_40']
+2025-10-12 10:37:19,769 INFO 127.0.0.1 - - [12/Oct/2025 10:37:19] "POST /chat HTTP/1.1" 200 -
+2025-10-12 10:38:01,438 INFO 127.0.0.1 - - [12/Oct/2025 10:38:01] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 10:38:01,744 INFO Chat request (session=7d43f6dc-3f4e-4a): what is credit card trans fee?
+2025-10-12 10:38:01,745 INFO Initializing new session: 7d43f6dc-3f4e-4a
+2025-10-12 10:38:01,745 INFO Intent detected: faq
+2025-10-12 10:38:01,745 INFO [DEBUG] is_followup_question: True
+2025-10-12 10:38:01,745 INFO [DEBUG] last_topic: what is credit card trans fee?
+2025-10-12 10:38:01,745 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 10:38:02,804 INFO Finished embedding 1 chunks
+2025-10-12 10:38:02,805 INFO [DEBUG] query used for embedding: what is credit card trans fee?
+2025-10-12 10:38:02,805 INFO FAISS search: [32, 31, 33, 23, 34]
+2025-10-12 10:38:02,807 INFO Retrieved 5 context chunks for chat
+2025-10-12 10:38:02,807 INFO Calling Gemini generation API
+2025-10-12 10:38:03,870 INFO FAQ response sent: 'Please visit https://www.firstcitizenstt.com/personal-bankin...' citations=['chunk_32', 'chunk_31', 'chunk_33', 'chunk_23', 'chunk_34']
+2025-10-12 10:38:03,870 INFO 127.0.0.1 - - [12/Oct/2025 10:38:03] "POST /chat HTTP/1.1" 200 -
+2025-10-12 10:47:45,396 INFO 127.0.0.1 - - [12/Oct/2025 10:47:45] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 10:47:45,664 INFO Chat request (session=b0f7a54c-8934-4a): what is mobile banking?
+2025-10-12 10:47:45,664 INFO Initializing new session: b0f7a54c-8934-4a
+2025-10-12 10:47:45,664 INFO Intent detected: faq
+2025-10-12 10:47:45,664 INFO [DEBUG] is_followup_question: False
+2025-10-12 10:47:45,664 INFO [DEBUG] last_topic: what is mobile banking?
+2025-10-12 10:47:45,664 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 10:47:47,123 INFO Finished embedding 1 chunks
+2025-10-12 10:47:47,124 INFO [DEBUG] query used for embedding: what is mobile banking?
+2025-10-12 10:47:47,124 INFO FAISS search: [37, 38, 36, 39, 45]
+2025-10-12 10:47:47,124 INFO Retrieved 5 context chunks for chat
+2025-10-12 10:47:47,124 INFO Calling Gemini generation API
+2025-10-12 10:47:48,584 INFO FAQ response sent: 'Mobile banking is a revolutionary way of banking from your m...' citations=['chunk_37', 'chunk_38', 'chunk_36', 'chunk_39', 'chunk_45']
+2025-10-12 10:47:48,584 INFO 127.0.0.1 - - [12/Oct/2025 10:47:48] "POST /chat HTTP/1.1" 200 -
+2025-10-12 10:49:06,545 INFO 127.0.0.1 - - [12/Oct/2025 10:49:06] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 10:49:06,809 INFO Chat request (session=a866ce70-7915-4c): what is credit card fee
+2025-10-12 10:49:06,809 INFO Initializing new session: a866ce70-7915-4c
+2025-10-12 10:49:06,809 INFO Intent detected: faq
+2025-10-12 10:49:06,809 INFO [DEBUG] is_followup_question: True
+2025-10-12 10:49:06,809 INFO [DEBUG] last_topic: what is credit card fee
+2025-10-12 10:49:06,809 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 10:49:08,230 INFO Finished embedding 1 chunks
+2025-10-12 10:49:08,230 INFO [DEBUG] query used for embedding: what is credit card fee
+2025-10-12 10:49:08,231 INFO FAISS search: [31, 32, 34, 18, 33]
+2025-10-12 10:49:08,233 INFO Retrieved 5 context chunks for chat
+2025-10-12 10:49:08,233 INFO Calling Gemini generation API
+2025-10-12 10:49:09,603 INFO FAQ response sent: 'Could you please specify which credit card you're asking abo...' citations=['chunk_31', 'chunk_32', 'chunk_34', 'chunk_18', 'chunk_33']
+2025-10-12 10:49:09,603 INFO 127.0.0.1 - - [12/Oct/2025 10:49:09] "POST /chat HTTP/1.1" 200 -
+2025-10-12 10:50:43,014 INFO 127.0.0.1 - - [12/Oct/2025 10:50:43] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 10:50:43,279 INFO Chat request (session=49d4c237-c356-4c): what is cc fee
+2025-10-12 10:50:43,279 INFO Initializing new session: 49d4c237-c356-4c
+2025-10-12 10:50:43,279 INFO Intent detected: faq
+2025-10-12 10:50:43,279 INFO [DEBUG] is_followup_question: False
+2025-10-12 10:50:43,280 INFO [DEBUG] last_topic: what is cc fee
+2025-10-12 10:50:43,280 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 10:50:44,705 INFO Finished embedding 1 chunks
+2025-10-12 10:50:44,706 INFO [DEBUG] query used for embedding: what is cc fee
+2025-10-12 10:50:44,706 INFO FAISS search: [31, 32, 34, 33, 18]
+2025-10-12 10:50:44,706 INFO Retrieved 5 context chunks for chat
+2025-10-12 10:50:44,706 INFO Calling Gemini generation API
+2025-10-12 10:50:46,366 INFO FAQ response sent: 'I am sorry, I do not have the information about "cc fee". Wo...' citations=['chunk_31', 'chunk_32', 'chunk_34', 'chunk_33', 'chunk_18']
+2025-10-12 10:50:46,367 INFO 127.0.0.1 - - [12/Oct/2025 10:50:46] "POST /chat HTTP/1.1" 200 -
+2025-10-12 13:30:20,614 INFO 127.0.0.1 - - [12/Oct/2025 13:30:20] "OPTIONS /chat HTTP/1.1" 200 -
+2025-10-12 13:30:20,873 INFO Chat request (session=7b37dd27-2745-45): yes
+2025-10-12 13:30:20,873 INFO Initializing new session: 7b37dd27-2745-45
+2025-10-12 13:30:20,873 INFO Intent detected: faq
+2025-10-12 13:30:20,873 INFO [DEBUG] is_followup_question: False
+2025-10-12 13:30:20,873 INFO [DEBUG] last_topic: yes
+2025-10-12 13:30:20,873 INFO Embedding chunk 0 (attempt 1)
+2025-10-12 13:30:21,930 INFO Finished embedding 1 chunks
+2025-10-12 13:30:21,931 INFO [DEBUG] query used for embedding: yes
+2025-10-12 13:30:21,932 INFO FAISS search: [54, 10, 18, 16, 40]
+2025-10-12 13:30:21,932 INFO Retrieved 5 context chunks for chat
+2025-10-12 13:30:21,932 INFO Calling Gemini generation API
+2025-10-12 13:30:22,976 INFO FAQ response sent: 'Understood.
+
+For assistance, contact our Support Team from 6...' citations=['chunk_54', 'chunk_10', 'chunk_18', 'chunk_16', 'chunk_40']
+2025-10-12 13:30:22,977 INFO 127.0.0.1 - - [12/Oct/2025 13:30:22] "POST /chat HTTP/1.1" 200 -
